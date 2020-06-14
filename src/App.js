@@ -26,12 +26,12 @@ class App extends Component {
     return (
       <div>
         <h1 className="App">This is where the ISS is passing right now!</h1>
-        <Map center={[pos.latitude, pos.longitude]} zoom={3} id="mapid">
+        <Map center={[pos.latitude, pos.longitude]} zoom={7} id="mapid">
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           />
-          <Marker position={[pos.latitude, pos.longitude]}></Marker>
+          <Marker position={[pos.latitude, pos.longitude]} onChange={ this.componentDidMount() }></Marker>
         </Map>
       </div>
     )
@@ -39,8 +39,3 @@ class App extends Component {
 }
 
 export default App;
-
-
-// fetch('http://api.open-notify.org/iss-now.json')
-// .then(response => response.json()) 
-// .then(positions => positions.latitude);
