@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('earth_night.png');
+  background-position: center;
+  background-size: cover;
 }
 
 code {
