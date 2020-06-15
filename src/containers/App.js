@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://api.open-notify.org/iss-now.json')
+    fetch('https://api.open-notify.org/iss-now.json')
     .then(response => response.json())
     .then(positions => this.setState({ pos: positions.iss_position }))
   }
